@@ -1,0 +1,17 @@
+-- Washing dishes --
+
+- Locate the sink.
+- If sink not located, exit the bedroom.
+- When sink is located, find the faucet.
+- When faucet is located, twist the knob.
+    - If knob not found, look for lever. 
+    - When lever located, lift lever.
+    - Wait until the water starts running.
+    - Pick up sponge and a plate.
+    - Place under running water and gently rub plates surface until clean.
+    - Turn plate and repeat action.
+    - When done, place plate in the drain basket.
+    - Repeat action for each plate until nothing left in the sink.
+    - When done, stop the the running water.
+- Stop!
+- Tell wife.
