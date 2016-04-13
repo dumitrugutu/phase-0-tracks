@@ -8,8 +8,9 @@
     - When lever located, lift lever.
     - Wait until the water starts running.
     - Pick up sponge and a plate.
-    - Place under running water and gently rub plates surface until clean.
-    - Turn plate and repeat action.
+    - Place under running water and gently rub plate's surface
+    with sponge until clean.
+    - Flip plate to opposite side and repeat action.
     - When done, place plate in the drain basket.
     - Repeat action for each plate until nothing left in the sink.
     - When done, stop the the running water.
