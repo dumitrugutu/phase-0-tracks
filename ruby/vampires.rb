@@ -18,27 +18,25 @@ employee_input = ""
 
 until employee_input == secret_allergy
   puts "PLease write down your allergies. Type 'done' when finished."
-  employee_input = gets.chomp.downcase
-  break if employee_input == "done"
+  allergies = gets.chomp.downcase
+  break if allergies == secret_allergy
 end
-
-  puts "Probably a vampire"
   
   puts "Name: #{name}"
   puts "Age: #{age}"
   puts "Likes garlic bread: #{garlic_bread}"
   puts "Wants health insurance: #{health_insurance}"
+  puts "Allergic to: #{allergies}"
   
 if (age < 100 && garlic_bread == "YES") || health_insurance == "YES"
     puts "Probably not a vampire."
-elsif age > 100 && (garlic_bread == "NO" || health_insurance == "NO")
-	puts "Probably a vampire."
+elsif (allergies == secret_allergy && age > 100) && (garlic_bread == "NO" || health_insurance == "NO")
+  puts "Probably a vampire."
 elsif (age > 100 && garlic_bread == "NO") && health_insurance == "NO"
-	puts "Almost certainly a vampire."
+  puts "Almost certainly a vampire."
 elsif name == "Drake Cula" || name == "Tu Fang"
-	puts "Definitely a vampire."
+  puts "Definitely a vampire."
 else
-	puts "Results inconclusive."	
+  puts "Results inconclusive."  
 end
-
 end
