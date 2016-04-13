@@ -11,8 +11,18 @@ until employee_form == 0
   garlic_bread = gets.chomp.upcase
   puts "Would you like to enroll in the company’s health insurance?(yes/no)"
   health_insurance = gets.chomp.upcase
-
   employee_form = employee_form - 1
+
+secret_allergy = "sunshine"
+employee_input = ""
+
+until employee_input == secret_allergy
+  puts "PLease write down your allergies. Type 'done' when finished."
+  employee_input = gets.chomp.downcase
+  break if employee_input == "done"
+end
+
+  puts "Probably a vampire"
   
   puts "Name: #{name}"
   puts "Age: #{age}"
