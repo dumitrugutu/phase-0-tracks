@@ -18,3 +18,8 @@ elsif name == "Drake Cula" || name == "Tu Fang"
 else
 	puts "Results inconclusive."	
 end
+
+puts "Name: #{name}"
+puts "Age: #{age}"
+puts "Likes garlic bread: #{garlic_bread}"
+puts "Has health insurance: #{health_insurance}"
