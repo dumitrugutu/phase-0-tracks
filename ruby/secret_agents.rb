@@ -15,9 +15,30 @@ secret_password = gets.chomp
 
 index = 0
 while index < secret_password.length
-  secret_password[index] = secret_password[index].next 
+  secret_password[index] = secret_password[index].next[0] 
   index += 1
 end
 
 puts secret_password
 
+# How to decrypt the password:
+# create a variable that contains
+# all the letters of the alphabet
+# start by using the whole alphabet
+# as a string.
+# take each letter of the password
+# compare it with the alphabet string 
+# to find the indexed number compared
+# to the alphabet string.
+# subtract 1 from that number.
+# call it as the letter again and replace it
+
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+index = 0
+while index < secret_password.length
+	secret_password[index] = alphabet[alphabet.index(secret_password[index]) -1]
+	index += 1
+end
+
+puts secret_password
