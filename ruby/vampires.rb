@@ -40,16 +40,19 @@ until employee_form == 0
   end
 
   secret_allergy = "sunshine"
+  allergy = ""
 
   # Check for allergies
-  puts "Do you have any allergies? 
-  Write 'done' when finished."
+  puts "Do you have any allergies? Write 'done' when finished."
   allergies = gets.chomp.downcase
 
-  until allergies == secret_allergy 
+  until allergies == secret_allergy || allergies == "done" 
     puts "Do you have any other allergies?. Write 'done' when finished."
     allergies = gets.chomp.downcase
-    break allergies == "done"
+  end
+  
+  if allergies == "sunshine"
+    puts "#{name} is probably a vampire"
   end
   
   puts "Name: #{name}"
@@ -57,10 +60,6 @@ until employee_form == 0
   puts "Likes garlic bread: #{garlic_bread}"
   puts "Wants health insurance: #{health_insurance}"
   puts "Allergic to: #{allergies}"
-    
-  if allergies == "sunshine"
-    puts "#{name} is probably a vampire"
-  end
   
   # Detection algorithm
   case
