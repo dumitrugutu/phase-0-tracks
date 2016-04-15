@@ -10,36 +10,29 @@ until employee_form == 0
   name = gets.chomp
   
   # Convert string into an integer
-  puts "What year were you born?"
-  year_born = gets.chomp.to_i
-
-  # Convert string into an integer
   puts "How old are you?"
   age = gets.chomp.to_i
 
-  # Verify age
-  current_year = 2016
-
   # Convert employee input into boolean
-  if (current_year - year_born) == age
+  if age < 100
     age = true
   else
     age = false
   end
 
   puts "Do you like eating garlic bread for lunch?(yes/no)"
-  garlic_bread = gets.chomp.upcase
+  garlic_bread = gets.chomp.downcase
   # Convert employee input into boolean
-  if garlic_bread == "YES"
+  if garlic_bread == "yes"
     garlic_bread = true
   else
     garlic_bread = false
   end
 
   puts "Would you like to enroll in the company’s health insurance?(yes/no)"
-  health_insurance = gets.chomp.upcase
+  health_insurance = gets.chomp.downcase
   # Convert employee input into boolean
-  if health_insurance == "YES"
+  if health_insurance == "yes"
     health_insurance = true
   else
     health_insurance = false
