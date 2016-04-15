@@ -54,24 +54,24 @@ until employee_form == 0
   until allergies == secret_allergy 
     puts "Do you have any other allergies?. Write 'done' when finished."
     allergies = gets.chomp.downcase
-    break if allergies == "done"
+    break allergies == "done"
   end
-
+  
+  puts "Name: #{name}"
+  puts "Age: #{age}"
+  puts "Likes garlic bread: #{garlic_bread}"
+  puts "Wants health insurance: #{health_insurance}"
+  puts "Allergic to: #{allergies}"
+    
   if allergies == "sunshine"
     puts "#{name} is probably a vampire"
   end
   
-    puts "Name: #{name}"
-    puts "Age: #{age}"
-    puts "Likes garlic bread: #{garlic_bread}"
-    puts "Wants health insurance: #{health_insurance}"
-    puts "Allergic to: #{allergies}"
-  
-  if (age < 100 && garlic_bread == "YES") || health_insurance == "YES"
+  if age && (garlic_bread || health_insurance)
     puts "Probably not a vampire."
-  elsif (allergies == secret_allergy && age > 100) && (garlic_bread == "NO" || health_insurance == "NO")
+  elsif !allergies && (!garlic_bread || !health_insurance)
     puts "Probably a vampire."
-  elsif (age > 100 && garlic_bread == "NO") && health_insurance == "NO"
+  elsif (!age && !garlic_bread) && !health_insurance
     puts "Almost certainly a vampire."
   elsif name == "Drake Cula" || name == "Tu Fang"
     puts "Definitely a vampire."
