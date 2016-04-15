@@ -2,7 +2,8 @@
 puts "How many employees do you want to process?"
 employee_form = gets.chomp.to_i
 
-# Repeat the process until each employee has completed the form
+# Repeat the process until each 
+# employee has completed the form
 until employee_form == 0
 
   # Collect personal information
@@ -41,7 +42,8 @@ until employee_form == 0
   secret_allergy = "sunshine"
 
   # Check for allergies
-  puts "Do you have any allergies? Write 'done' when finished."
+  puts "Do you have any allergies? 
+  Write 'done' when finished."
   allergies = gets.chomp.downcase
 
   until allergies == secret_allergy 
@@ -60,13 +62,25 @@ until employee_form == 0
     puts "#{name} is probably a vampire"
   end
   
-  if age && (garlic_bread || health_insurance)
+  # Detection algorithm
+  case
+  # When the employee got their age right
+  # and wants garlic bread, and insurance.
+  when age && (garlic_bread || health_insurance)
     puts "Probably not a vampire."
-  elsif !allergies && (!garlic_bread || !health_insurance)
+
+  # When the employee got their age wrong
+  # and says no to garlic bread or insurance.
+  when !age && (!garlic_bread || !health_insurance)
     puts "Probably a vampire."
-  elsif (!age && !garlic_bread) && !health_insurance
+
+  # When the employee got their age wrong
+  # and says no to garlic bread and insurance. 
+  when (!age && !garlic_bread) && !health_insurance
     puts "Almost certainly a vampire."
-  elsif name == "Drake Cula" || name == "Tu Fang"
+
+  # When employee's name is either one
+  when name == "Drake Cula" || name == "Tu Fang"
     puts "Definitely a vampire."
   else
     puts "Results inconclusive."  
@@ -76,3 +90,8 @@ until employee_form == 0
   employee_form = employee_form - 1
 
 end
+
+# After getting many calls from the Vampire Union:
+puts "Actually, never mind! What do these questions 
+have to do with anything? Let's all be friends."
+
