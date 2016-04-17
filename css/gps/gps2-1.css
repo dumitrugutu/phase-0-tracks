@@ -35,7 +35,7 @@ section {
 
 section.column-1 {
 	max-width: 45%;
-	padding: 20px 22px 35px 35px;
+	padding: 20px 22px 52px 35px;
 	margin: 0px;
 	background-color: #edf5f5;
 	display: inline-block;
@@ -53,7 +53,17 @@ section.column-2 {
 }
 
 section h2 {
-	font-size: 1.1em;
+	font-size: 1em;
+	margin-bottom: 0px;
+}
+
+section p {
+	font-size: .8em;
+
+}
+
+article ul {
+	font-size: .8em;
 }
 
 footer {
