@@ -39,12 +39,32 @@ end
 # subtract 1 from that number.
 # call it as the letter again and replace it
 
-alphabet = "abcdefghijklmnopqrstuvwxyz"
+def decrypt(str)
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-index = 0
-while index < secret_password.length
-	secret_password[index] = alphabet[alphabet.index(secret_password[index]) -1]
-	index += 1
+    index = 0
+    while index < str.length
+	    str[index] = alphabet[alphabet.index(str[index]) -1]
+	    index += 1
+    end
+
+    # If empty space move over to the next letter
+	if str[index] == " "
+	     index =+ 1
+	end
+    puts str
 end
 
-puts secret_password
+puts "Would you like to encrypt or decrypt the password?"
+agent_command = gets.chomp.downcase
+puts "Please enter the password:"
+password = gets.chomp.downcase
+
+if agent_command == "encrypt"
+	puts encrypt(password)
+elsif agent_command == "decrypt"
+   puts decrypt(password)
+else 
+	puts "Invalid input."
+end
+
