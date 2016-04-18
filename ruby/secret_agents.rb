@@ -9,17 +9,23 @@
 # zero-indexed.
 # Add +1 each time to avoid
 # an infinite loop.
+def encrypt(str)
+	# Create the alphabet variable
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-puts "What is the password?"
-secret_password = gets.chomp
+    index = 0
+    while index < str.length
+      # If the letter is 'z' start counting at 0
+      str[index] = str[index].next[0]
+      index += 1
+    end
 
-index = 0
-while index < secret_password.length
-  secret_password[index] = secret_password[index].next[0] 
-  index += 1
+    # If empty space move over to the next letter
+	if str[index] == " "
+	     index =+ 1
+	end
+	puts str
 end
-
-puts secret_password
 
 # How to decrypt the password:
 # create a variable that contains
