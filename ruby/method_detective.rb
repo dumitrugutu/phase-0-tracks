@@ -33,6 +33,9 @@
 
 “z”.ord
 => 122 
+
+"z".getbyte(0)
+=> 122
 # (What is the significance of the number 122 in relation to the character z?)
 # 122 is the numerical representation of the 'z' character in ASCII.
 
