@@ -1,3 +1,11 @@
+# Release 2.1
+
+def build_array(first, second, third)
+	return [first, second, third]
+end
+
+# Release 1
+
 release_one = Array.new
 p release_one
 release_one << "hello" 
@@ -21,3 +29,6 @@ release = ["word", 5, "cheese", true, nil]
 p release 
 join_releases = release + release_one
 p join_releases
+
+# Call method to return an array
+p build_array("word", 10, "bird")
