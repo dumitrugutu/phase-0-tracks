@@ -69,3 +69,17 @@ library = {
 		}
 	}
 }
+
+# access Ernest Hemingway's second book
+library[:classic_literature][:fiction_isle][:american_authors]
+[:Ernest_Hemingway][1]
+
+# add another book of Nikolai Gogol
+library[:classic_literature][:fiction_isle][:russian_authors]
+[:Nikolai_Gogol].push("The Government Inspector")
+
+# access number of books available 
+library[:on_sale][:popular_puzzles][:available]
+
+# does it include Vincent Price's autobiography?
+library[:autobiography][:Vincent_Price].include?("I Like What I Know")
