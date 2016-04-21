@@ -1,6 +1,5 @@
 
-# Get applicant's personal information
-puts "Please fill out this form."
+# Get client's information
 puts "Name:"
 name = gets.chomp
 puts "Address:"
@@ -9,23 +8,37 @@ puts "Email:"
 email = gets.chomp
 puts "Phone:"
 phone = gets.chomp
-puts "Salary:"
-salary = gets.chomp
+puts "Budget:"
+budget = gets.chomp.to_i
+puts "Do you have children?"
+has_children = gets.chomp
 
-# Store applicant's information as a hash
-applicant = {
+# change yes/no answers into boolean
+if has_children == "yes"
+    has_children = true
+else
+    has_children = false
+end
+
+puts "How many rooms?"
+number_rooms = gets.chomp
+puts "Decor theme:"
+decor_theme = gets.chomp
+
+
+# Store client's information as a hash
+client_information = {
     name: "#{name}", 
     address: "#{address}", 
     email: "#{email}", 
     phone: "#{phone}",
-    salary: "$#{salary}"
+    budget: "$#{budget}",
+    children: "#{has_children}",
+    rooms: "#{number_rooms}",
+    decor: "#{decor_theme}"
 }
-# Print applicant's information
-puts applicant[:name]
-puts applicant[:address]
-puts applicant[:email]
-puts applicant[:phone]
-puts applicant[:salary]
+
+p client_information
 
 # Ask applicant if they want to update their info
 puts "If you would like to update the resume, write which section (example: name).
