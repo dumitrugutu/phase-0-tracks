@@ -1,73 +1,41 @@
 # ask full name "Felicia Torres"
-puts "Please enter your first name:"
-first_name = gets.chomp.downcase
+puts "Please enter your full name:"
+full_name = gets.chomp
 
-puts "Please enter your last name:"
-last_name = gets.chomp.downcase
+p full_name
+# puts "Please enter your last name:"
+# last_name = gets.chomp.downcase
 
 # split first name into individual letters
-split_first_name = first_name.split('')
-p split_first_name
-
-# split last name into individual letters
-split_last_name = last_name.split('')
-p split_last_name
+split_full_name = full_name.split('')
+p split_full_name
+# # split last name into individual letters
+# split_last_name = last_name.split('')
 
 # create vowel and consonant variables
-vowels = "aeiou"
-consonants = "bcdfghjklmnpqrstvxzwy"
-first_alias = ""
+vowels = "aeiouAEIOU"
+consonants = "bcdfghjklmnpqrstvxzwyBCDFGHJKLMNPQRSTVXZWY"
+full_alias = ""
 
 # compare each letter in the first name
 # to the list of vowels
-split_first_name.map! do |letter|
+split_full_name.map! do |letter|
 	# replace the letter "u" with "a"
 	if letter == "u"
-		first_alias += "a"	
+		full_alias += "a"
+	elsif letter == "y"
+	    full_alias += "b"
+	elsif letter == " "
+	    full_alias += " "
 	# if the current letter is a vowel
 	elsif vowels.include?(letter)
 		# replace the vowel with the next vowel
-		first_alias += vowels[vowels.index(letter) + 1]
+		full_alias += vowels[vowels.index(letter) + 1]
 	else
 		# replace the consonant with the next consonant
-		first_alias += consonants[consonants.index(letter) + 1] 
+		full_alias += consonants[consonants.index(letter) + 1] 
 	end
-	p first_alias
+	 full_alias
 end
 
-last_alias = ""
-
-# compare each letter in the first name
-# to the list of vowels
-split_last_name.map! do |letter|
-	# replace the letter "u" with "a"
-	if letter == "u"
-		last_alias += "a"	
-	# if the current letter is a vowel
-	elsif vowels.include?(letter)
-		# replace the vowel with the next vowel
-		last_alias += vowels[vowels.index(letter) + 1]
-	else
-		# replace the consonant with the next consonant
-		last_alias += consonants[consonants.index(letter) + 1] 
-	end
-	p last_alias
-end
-
-# swap first name with last name "Torres Felicia"
-
-# replace every vowel("aeiou") in the name
-# with the next vowel in ("aeiou")
-# full_name = "Torres Felicia"
-# def create_alias()
-
-# 	vowel = "aeiou"
-    
-#     full_name.each do |letter| 
-#     	letter = vowel.next
-# end
-#  p letter
-
-
-# replace every consonant("bcdfghjklmnpqrstvxzwy") 
-# in the name with the next consonant
+p full_alias
