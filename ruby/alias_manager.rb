@@ -35,6 +35,25 @@ split_first_name.map! do |letter|
 	p first_alias
 end
 
+last_alias = ""
+
+# compare each letter in the first name
+# to the list of vowels
+split_last_name.map! do |letter|
+	# replace the letter "u" with "a"
+	if letter == "u"
+		last_alias += "a"	
+	# if the current letter is a vowel
+	elsif vowels.include?(letter)
+		# replace the vowel with the next vowel
+		last_alias += vowels[vowels.index(letter) + 1]
+	else
+		# replace the consonant with the next consonant
+		last_alias += consonants[consonants.index(letter) + 1] 
+	end
+	p last_alias
+end
+
 # swap first name with last name "Torres Felicia"
 
 # replace every vowel("aeiou") in the name
