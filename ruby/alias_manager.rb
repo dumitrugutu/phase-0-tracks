@@ -1,5 +1,5 @@
 # prompt agent for a name
-puts "Please enter a name. Type 'quit' to exit the program."
+puts "Hello, Private! Please enter a name. Type 'quit' to exit the program."
 name_to_change = gets.chomp
 
 # split name into two strings
@@ -43,5 +43,7 @@ alias_for_agent.map! do |letter|
 end
 secret_agent_names = {}
 secret_agent_names[agent_alias] = name_to_change
-p secret_agent_names
 
+secret_agent_names.each do |original_name, alias_name|
+	puts "#{original_name} is actually #{alias_name}"
+end
