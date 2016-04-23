@@ -9,7 +9,7 @@ email = gets.chomp
 puts "Phone:"
 phone = gets.chomp
 puts "Budget:"
-budget = gets.chomp.to_i
+budget = gets.chomp
 puts "Do you have children?"
 has_children = gets.chomp
 
@@ -25,7 +25,6 @@ number_rooms = gets.chomp
 puts "Decor theme:"
 decor_theme = gets.chomp
 
-
 # store client's information as a hash
 client_information = {
     name: "#{name}", 
@@ -38,64 +37,35 @@ client_information = {
     decor: "#{decor_theme}"
 }
 
-p client_information
+# print the hash back to the user
+client_information.each do |contact, info|
+    puts "#{contact}: #{info}"
+end
 
-# ask the client whether they want to 
-# update their information.
-  puts "Do you want to update/change any your information?(yes/none)."
+# ask the client if they want to update their profile
+  puts "would you like to update/change anything?(yes/none)."
   change_info = gets.chomp.downcase
 
-if change_info == "none"
-end
-
-# ask the client whether they want
-# to update their information
+# ask the client if they want to update their profile
 if change_info == "yes"
-    puts "What part would you like to change?(example: name)"
+    puts "Which one would you like to change?(example: name)"
     # convert client's option into a symbol
     update_profile = gets.chomp.to_sym.downcase
+    puts "#{update_profile}:"
+    client_value = gets.chomp
+
+    # update the hash with latest input
+    client_information["#{update_profile}"] = client_value
+    puts "Here's your updated profile"
+
+    # iterate through the hash and print the updated profile
+    client_information.each do |contact, info|
+    puts "#{contact}: #{info}"
+    end
+else
+    # print the all the client's profile using iteration
+    puts "Thank you, good bye!"
+    client_information.each do |contact, info|
+    puts "#{contact}: #{info}"
+    end
 end  
-
-# write if statements depending on what section they want to change
-if  update_profile == :name
-    puts "Name:"
-    client_information[:name] = gets.chomp
-end
-
-if update_profile == :address
-    puts "Address:"
-    client_information[:address] = gets.chomp
-end
-
-if update_profile == :email
-    puts "Email:"
-    client_information[:email] = gets.chomp
-end
-
-if update_profile == :phone
-    puts "Phone:"
-    client_information[:phone] = gets.chomp
-end
-
-if update_profile == :budget
-    puts "Budget:"
-    client_information[:budget] = gets.chomp
-end
-
-if update_profile == :children
-    puts "Children:"
-    client_information[:children] = gets.chomp
-end
-
-if update_profile == :rooms
-    puts "Rooms:"
-    client_information[:rooms] = gets.chomp
-end
-
-if update_profile == :decor
-    puts "Decor:"
-    client_information[:decor] = gets.chomp
-end
-
-# print updated hash
-p client_information
