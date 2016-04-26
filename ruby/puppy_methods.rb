@@ -54,3 +54,10 @@ class Student
 
 end
 
+all_students = {}
+50.times do |count|
+  all_students["Student #{count+1}"] = Student.new("Student #{count+1}")
+  # all_students["Student #{count+1}"].confused("Student #{count+1}")
+  # all_students["Student #{count+1}"].eureka("Student #{count+1}")
+end
+
