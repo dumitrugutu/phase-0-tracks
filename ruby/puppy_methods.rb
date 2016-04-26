@@ -61,3 +61,9 @@ all_students = {}
   # all_students["Student #{count+1}"].eureka("Student #{count+1}")
 end
 
+all_students.each do |name, student|
+  student.confused(name)
+  student.eureka(name)
+end
+
+
