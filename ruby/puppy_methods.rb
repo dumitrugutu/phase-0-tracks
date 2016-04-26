@@ -38,3 +38,19 @@ puppy.roll_over
 puts puppy.dog_years(10)
 puppy.play_dead(5)
 
+class Student
+
+  def initialize(name)
+    puts "Welcome to Dev Bootcamp #{name}"
+  end
+
+  def confused(student)
+    puts "#{student} is confused"
+  end
+
+  def eureka(student)
+    puts "#{student} is having a eureka moment!"
+  end
+
+end
+
