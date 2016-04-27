@@ -15,10 +15,23 @@ class Santa
 		puts "That was a good #{pastry}!"
 		pastry
 	end
-	
+
+	# setter methods
+	def celebrate_birthday=(new_age)
+		@age = new_age
+	end
+
+	def get_mad_at=(reindeer_name)
+		@get_mad_at = reindeer_name
+	end
+
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+
 end
 
-santa = Santa.new
+santa = Santa.new("female", "Latino")
 santa.speak("Ho, ho, ho! Haaaappy holidays!")
 santa.eat_milk_and_cookies("chocolate chip")
 
@@ -32,3 +45,4 @@ example_ethnicities = ["black", "Latino", "white",
 example_genders.length.times do |i|
 	santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
+
