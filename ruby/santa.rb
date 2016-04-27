@@ -40,11 +40,7 @@ class Santa
 	def ethnicity
 		@ethnicity
 	end
-
-	def get_mad_at
-		@get_mad_at
-	end
-
+	
 end
 
 reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", 
