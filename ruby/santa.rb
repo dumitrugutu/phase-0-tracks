@@ -22,14 +22,13 @@ class Santa
 		puts "Santa is #{new_age} years old"
 	end
 
-	def get_mad_at=(reindeer_ranking)
-		@get_mad_at = reindeer_ranking[4]
-		puts "Santa is mad at #{reindeer_ranking[4]}"
+	def get_mad_at=(reindeer_name)
+		@get_mad_at = reindeer_name
+		puts "Santa is mad at #{reindeer_name}"
 	end
 
-	def gender=(new_gender)
-		@gender = new_gender
-		puts "Santa is #{new_gender}"
+	def gender(gender)
+		puts "Santa is a #{ethnicity} #{gender}"
 	end
 
 	# getter methods 
@@ -40,7 +39,7 @@ class Santa
 	def ethnicity
 		@ethnicity
 	end
-	
+
 end
 
 reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", 
@@ -54,10 +53,10 @@ santa.speak("Ho, ho, ho! Haaaappy holidays!")
 santa.eat_milk_and_cookies("chocolate chip")
 
 santa.celebrate_birthday = 1
-santa.ethnicity
+santa.gender("woman")
 
-santas = []
-example_genders.length.times do |i|
-	santas << Santa.new(example_genders[i], example_ethnicities[i])
-end
+# santas = []
+# example_genders.length.times do |i|
+# 	santas << Santa.new(example_genders[i], example_ethnicities[i])
+# end
 
