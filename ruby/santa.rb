@@ -21,9 +21,8 @@ class Santa
 		puts "Santa is #{age} years old"
 	end
 
-	def get_mad_at=(reindeer_name)
-		@get_mad_at = reindeer_name
-		puts "Santa is mad at #{reindeer_name}"
+	def get_mad_at(reindeer)
+		puts "Santa is mad at #{reindeer}"
 	end
 
 	def gender(gender)
@@ -53,6 +52,8 @@ santa.eat_milk_and_cookies("chocolate chip")
 
 santa.celebrate_birthday(1)
 santa.gender("woman")
+
+santa.get_mad_at("Vixen")
 
 # santas = []
 # example_genders.length.times do |i|
