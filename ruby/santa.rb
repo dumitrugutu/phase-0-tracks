@@ -17,9 +17,8 @@ class Santa
 	end
 
 	# setter methods
-	def celebrate_birthday=(new_age)
-		@age = new_age
-		puts "Santa is #{new_age} years old"
+	def celebrate_birthday(age)
+		puts "Santa is #{age} years old"
 	end
 
 	def get_mad_at=(reindeer_name)
@@ -52,7 +51,7 @@ santa = Santa.new("female", "Latino")
 santa.speak("Ho, ho, ho! Haaaappy holidays!")
 santa.eat_milk_and_cookies("chocolate chip")
 
-santa.celebrate_birthday = 1
+santa.celebrate_birthday(1)
 santa.gender("woman")
 
 # santas = []
