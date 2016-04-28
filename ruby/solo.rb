@@ -17,7 +17,7 @@ class CoffeeMachine
 		puts "Initializing a new cup of coffee..."
 		@sweet = sweet
 		@flavor = flavor
-		@size = "standard 14oz"
+		@size = "medium"
 	end
 
 	def iced_coffee
