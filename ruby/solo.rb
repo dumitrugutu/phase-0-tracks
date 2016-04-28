@@ -34,7 +34,28 @@ class CoffeeMachine
 
 end
 
-cup_of = CoffeeMachine.new("2 cubes", "hazelnut")
-cup_of.iced_coffee
-cup_of.hot_coffee
+orders = []
 
+loop do
+	
+	puts "What kind of coffee would you like? Type 'done' to finish your order"
+	type_of_coffee = gets.chomp.downcase
+	
+	if type_of_coffee == "done" || type_of_coffee == ""
+        break
+    end
+    
+    puts "Initializing a new cup of #{type_of_coffee}..."
+	puts "How many cubes of sugar?"
+	cubes_of_sugar = gets.chomp.to_i
+	puts "Adding #{cubes_of_sugar} cubes of sugar"
+	puts "What flavor?"
+	flavor = gets.chomp.downcase
+	puts "Adding #{flavor} flavor"
+	
+    cup_of = CoffeeMachine.new("#{cubes_of_sugar}", "#{flavor}")
+    orders << CoffeeMachine.new("#{cubes_of_sugar}", "#{flavor}")
+        
+end
+
+orders
