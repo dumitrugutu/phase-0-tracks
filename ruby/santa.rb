@@ -58,12 +58,17 @@ end
 
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["USA", "Canada", "Mexico", "Brasil", "Ghana", "Niger", "South Africa", 
-	"Australia", "Russia", "Germany", "Scotland", "Malta", "Korea", "Japan", "Wonderland", N/A"]
+	"Australia", "Russia", "Germany", "Scotland", "Malta", "Korea", "Japan", "Wonderland", "N/A"]
 
+140.times do 
+	santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+	santa.age = rand(140)
+	puts "This santa is a #{santa.age} years old #{santa.gender} from #{santa.ethnicity}"
+end
 
 # santas = []
 # example_genders.length.times do |i|
-# 	santas << Santa.new(example_genders[i], example_ethnicities[i])
+# santas << Santa.new(example_genders[i], example_ethnicities[i])
 # end
 # santa = Santa.new("female", "Latino")
 # santa.speak("Ho, ho, ho! Haaaappy holidays!")
