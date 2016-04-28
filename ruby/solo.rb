@@ -21,11 +21,16 @@ class CoffeeMachine
 	end
 
 	def iced_coffee
-	    puts "Working on a #{size} iced_coffee" 
+	    puts "Working on a #{size} iced_coffee..." 
+	end
+
+	def hot_coffee
+		puts "Brewing a #{size} size hot coffee..."
 	end
 
 end
 
 cup_of = CoffeeMachine.new("2 cubes", "hazelnut")
 cup_of.iced_coffee
+cup_of.hot_coffee
 
