@@ -35,6 +35,10 @@ class Santa
 		@gender = gender
 	end
 
+	def ethnicity=(ethnicity)
+		@ethnicity = ethnicity
+	end
+
 	# getter methods 
 	# def age 
 	# 	@age
