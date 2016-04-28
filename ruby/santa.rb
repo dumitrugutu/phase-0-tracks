@@ -31,8 +31,8 @@ class Santa
 		puts "Santa is mad at #{reindeer}"
 	end
 
-	def gender(gender)
-		puts "Santa is a #{@ethnicity} #{@gender}"
+	def gender=(gender)
+		@gender = gender
 	end
 
 	# getter methods 
