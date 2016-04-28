@@ -1,4 +1,7 @@
 class Santa
+
+	attr_accessor :age
+	attr_reader :gender, :ethnicity
 	
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance ..."
@@ -33,13 +36,13 @@ class Santa
 	end
 
 	# getter methods 
-	def age 
-		@age
-	end
+	# def age 
+	# 	@age
+	# end
 
-	def ethnicity
-		@ethnicity
-	end
+	# def ethnicity
+	# 	@ethnicity
+	# end
 
 end
 
@@ -47,16 +50,14 @@ example_genders = ["agender", "female", "bigender", "male", "female", "gender fl
 example_ethnicities = ["black", "Latino", "white", 
 	"Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-santas = []
-example_genders.length.times do |i|
-	santas << Santa.new(example_genders[i], example_ethnicities[i])
-end
-
-santa = Santa.new("female", "Latino")
-santa.speak("Ho, ho, ho! Haaaappy holidays!")
-santa.eat_milk_and_cookies("chocolate chip")
-
-santa.celebrate_birthday(1)
-santa.gender("woman")
-santa.get_mad_at("Vixen")
+# santas = []
+# example_genders.length.times do |i|
+# 	santas << Santa.new(example_genders[i], example_ethnicities[i])
+# end
+# santa = Santa.new("female", "Latino")
+# santa.speak("Ho, ho, ho! Haaaappy holidays!")
+# santa.eat_milk_and_cookies("chocolate chip")
+# santa.celebrate_birthday(1)
+# santa.gender("woman")
+# santa.get_mad_at("Vixen")
 
