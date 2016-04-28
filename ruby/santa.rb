@@ -24,7 +24,7 @@ class Santa
 
 	# setter methods
 	def celebrate_birthday(age)
-		puts "Santa is #{age} years old"
+		@age += 1
 	end
 
 	def get_mad_at(reindeer)
@@ -57,8 +57,9 @@ class Santa
 end
 
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Latino", "white", 
-	"Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_ethnicities = ["USA", "Canada", "Mexico", "Brasil", "Ghana", "Niger", "South Africa", 
+	"Australia", "Russia", "Germany", "Scotland", "Malta", "Korea", "Japan", "Wonderland", N/A"]
+
 
 # santas = []
 # example_genders.length.times do |i|
@@ -70,4 +71,3 @@ example_ethnicities = ["black", "Latino", "white",
 # santa.celebrate_birthday(1)
 # santa.gender
 # santa.get_mad_at("Rudolph")
-
