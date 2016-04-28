@@ -20,4 +20,12 @@ class CoffeeMachine
 		@size = "standard 14oz"
 	end
 
+	def iced_coffee
+	    puts "Working on a #{size} iced_coffee" 
+	end
+
 end
+
+cup_of = CoffeeMachine.new("2 cubes", "hazelnut")
+cup_of.iced_coffee
+
