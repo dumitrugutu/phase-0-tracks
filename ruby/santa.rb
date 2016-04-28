@@ -8,7 +8,7 @@ class Santa
 		@gender = gender
 		@ethnicity = ethnicity
         @age = age
-        reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", 
+        @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", 
 	    "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 	end
 	
@@ -28,20 +28,22 @@ class Santa
 	end
 
 	def get_mad_at(reindeer)
-		puts "Santa is mad at #{reindeer}"
+		@reindeer_ranking.delete(reindeer)
+		@reindeer_ranking.push(reindeer)
+		@reindeer_ranking
 	end
 
-	def gender=(gender)
-		@gender = gender
-	end
+	# def gender=(gender)
+	# 	@gender = gender
+	# end
 
-	def ethnicity=(ethnicity)
-		@ethnicity = ethnicity
-	end
+	# def ethnicity=(ethnicity)
+	# 	@ethnicity = ethnicity
+	# end
 
-	def age=(age)
-		@age = age
-	end
+	# def age=(age)
+	# 	@age = age
+	# end
 
 	# getter methods 
 	# def age 
@@ -66,6 +68,6 @@ example_ethnicities = ["black", "Latino", "white",
 # santa.speak("Ho, ho, ho! Haaaappy holidays!")
 # santa.eat_milk_and_cookies("chocolate chip")
 # santa.celebrate_birthday(1)
-# santa.gender("woman")
-# santa.get_mad_at("Vixen")
+# santa.gender
+# santa.get_mad_at("Rudolph")
 
