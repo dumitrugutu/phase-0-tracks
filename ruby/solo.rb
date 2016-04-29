@@ -79,3 +79,7 @@ loop do
     end
         
 end
+
+orders.each do |cup|
+	cup.all_orders
+end
