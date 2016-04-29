@@ -21,7 +21,11 @@ class CoffeeMachine
 	end
 
 	def iced_coffee
-	    puts "Working on a #{size} iced coffee..." 
+		puts "How many cubes of sugar?"
+		@sweet = gets.chomp.to_i
+		puts "What flavor?"
+		@flavor = gets.chomp.downcase
+	    puts "Working on a #{size} iced coffee with #{sweet} cubes of sugar and #{flavor} flavor" 
 	end
 
 	def hot_coffee
@@ -33,7 +37,17 @@ class CoffeeMachine
 	end
 
 	def espresso
-		puts "Your espresso will be ready shortly"
+		puts "Your espresso will be ready in 10 seconds"
+		seconds_remaining = 10
+		until seconds_remaining == 0
+		puts "#{seconds_remaining} remaining..." 
+	    seconds_remaining -= 1
+	    end
+	    puts "Your espresso is ready!"
+	end
+
+	def all_orders
+		puts "Your order is a #{size} coffee with #{sweet} cups of sugar and #{flavor} flavor"
 	end
 
 end
@@ -54,8 +68,18 @@ loop do
 
     if type_of_coffee == "hot coffee"
     	cup_of.hot_coffee
+
+    elsif type_of_coffee == "iced coffee"
+    	cup_of.iced_coffee
+
+    elsif type_of_coffee == "espresso"
+    	cup_of.espresso
+    else
+    	puts "Sorry, I didn't get that. We have hot coffee, iced coffee or espresso"
     end
         
 end
 
-p orders
+orders.each do |cup|
+	cup.all_orders
+end
