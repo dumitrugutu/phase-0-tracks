@@ -25,7 +25,11 @@ class CoffeeMachine
 	end
 
 	def hot_coffee
-		puts "Brewing a #{size} size hot coffee..."
+		puts "How many cubes of sugar?"
+		@sweet = gets.chomp.to_i
+		puts "What flavor?"
+		@flavor = gets.chomp.downcase
+		puts "Brewing a #{size} size hot coffee with #{sweet} and #{flavor} flavor"
 	end
 
 	def espresso
@@ -45,13 +49,6 @@ loop do
         break
     end
     
-	puts "How many cubes of sugar?"
-	@sweet = gets.chomp.to_i
-	puts "Adding #{cubes_of_sugar} cubes of sugar"
-	puts "What flavor?"
-	@flavor = gets.chomp.downcase
-	puts "Adding #{flavor} flavor"
-	
     cup_of = CoffeeMachine.new("#{sweet}", "#{flavor}")
     orders << CoffeeMachine.new("#{cubes_of_sugar}", "#{flavor}")
         
