@@ -21,7 +21,11 @@ class CoffeeMachine
 	end
 
 	def iced_coffee
-	    puts "Working on a #{size} iced coffee..." 
+		puts "How many cubes of sugar?"
+		@sweet = gets.chomp.to_i
+		puts "What flavor?"
+		@flavor = gets.chomp.downcase
+	    puts "Working on a #{size} iced coffee with #{sweet} cubes of sugar and #{flavor} flavor" 
 	end
 
 	def hot_coffee
