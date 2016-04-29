@@ -29,7 +29,7 @@ class CoffeeMachine
 		@sweet = gets.chomp.to_i
 		puts "What flavor?"
 		@flavor = gets.chomp.downcase
-		puts "Brewing a #{size} size hot coffee with #{sweet} and #{flavor} flavor"
+		puts "Brewing a #{size} size hot coffee with #{sweet} cubes of sugar and #{flavor} flavor"
 	end
 
 	def espresso
@@ -49,9 +49,13 @@ loop do
         break
     end
     
-    cup_of = CoffeeMachine.new("#{sweet}", "#{flavor}")
-    orders << CoffeeMachine.new("#{cubes_of_sugar}", "#{flavor}")
+    cup_of = CoffeeMachine.new("#{@sweet}", "#{@flavor}")
+    orders << cup_of
+
+    if type_of_coffee == "hot coffee"
+    	cup_of.hot_coffee
+    end
         
 end
 
-orders
+p orders
