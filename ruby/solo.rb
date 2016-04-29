@@ -46,6 +46,10 @@ class CoffeeMachine
 	    puts "Your espresso is ready!"
 	end
 
+	def all_orders
+		puts "Your order is a #{size} coffee with #{sweet} cups of sugar and #{flavor} flavor"
+	end
+
 end
 
 orders = []
