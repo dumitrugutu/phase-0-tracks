@@ -65,7 +65,7 @@ loop do
     elsif type_of_coffee == "espresso"
     	cup_of.espresso
     else
-    	puts "Sorry, I didn't get that. We have hot coffee, iced caffee or espresso"
+    	puts "Sorry, I didn't get that. We have hot coffee, iced coffee or espresso"
     end
         
 end
