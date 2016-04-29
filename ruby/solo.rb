@@ -58,14 +58,14 @@ loop do
 
     if type_of_coffee == "hot coffee"
     	cup_of.hot_coffee
-    end
 
-    if type_of_coffee == "iced coffee"
+    elsif type_of_coffee == "iced coffee"
     	cup_of.iced_coffee
-    end
 
-    if type_of_coffee == "espresso"
+    elsif type_of_coffee == "espresso"
     	cup_of.espresso
+    else
+    	puts "Sorry, I didn't get that. We have hot coffee, iced caffee or espresso"
     end
         
 end
