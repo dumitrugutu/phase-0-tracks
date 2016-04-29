@@ -37,7 +37,13 @@ class CoffeeMachine
 	end
 
 	def espresso
-		puts "Your espresso will be ready shortly"
+		puts "Your espresso will be ready in 10 seconds"
+		seconds_remaining = 10
+		until seconds_remaining == 0
+		puts "#{seconds_remaining} remaining..." 
+	    seconds_remaining -= 1
+	    end
+	    puts "Your espresso is ready!"
 	end
 
 end
@@ -69,5 +75,3 @@ loop do
     end
         
 end
-
-p orders
