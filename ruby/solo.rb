@@ -63,6 +63,10 @@ loop do
     if type_of_coffee == "iced coffee"
     	cup_of.iced_coffee
     end
+
+    if type_of_coffee == "espresso"
+    	cup_of.espresso
+    end
         
 end
 
