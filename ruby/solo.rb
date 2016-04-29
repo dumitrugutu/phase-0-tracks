@@ -45,15 +45,14 @@ loop do
         break
     end
     
-    puts "Initializing a new cup of #{type_of_coffee}..."
 	puts "How many cubes of sugar?"
-	cubes_of_sugar = gets.chomp.to_i
+	@sweet = gets.chomp.to_i
 	puts "Adding #{cubes_of_sugar} cubes of sugar"
 	puts "What flavor?"
-	flavor = gets.chomp.downcase
+	@flavor = gets.chomp.downcase
 	puts "Adding #{flavor} flavor"
 	
-    cup_of = CoffeeMachine.new("#{cubes_of_sugar}", "#{flavor}")
+    cup_of = CoffeeMachine.new("#{sweet}", "#{flavor}")
     orders << CoffeeMachine.new("#{cubes_of_sugar}", "#{flavor}")
         
 end
