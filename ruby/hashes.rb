@@ -39,7 +39,7 @@ client_information = {
 
 # print the hash back to the user
 client_information.each do |contact, info|
-    puts "#{contact}: #{info}"
+    p "#{contact}: #{info}"
 end
 
 # ask the client if they want to update their profile
@@ -60,12 +60,12 @@ if change_info == "yes"
 
     # iterate through the hash and print the updated profile
     client_information.each do |contact, info|
-    puts "#{contact}: #{info}"
+    p "#{contact}: #{info}"
     end
 else
     # print the all the client's profile using iteration
     puts "Thank you, good bye!"
     client_information.each do |contact, info|
-    puts "#{contact}: #{info}"
+    p "#{contact}: #{info}"
     end
 end  
