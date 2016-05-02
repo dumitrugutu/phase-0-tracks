@@ -2,8 +2,8 @@
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
 list = "Milk eggs bread fruit cereal coffee"
-  # set default quantity
-  # grocery_list = {"milk" => 1, "eggs" => 1, "bread" => 1, "cereal" => 1, "coffee" => 1}
+# set default quantity
+# grocery_list = {"milk" => 1, "eggs" => 1, "bread" => 1, "cereal" => 1, "coffee" => 1}
 def create_grocery_list(list)
 	grocery_list_hash = {}
   # print the list to the console [can you use one of your other methods here?]
@@ -52,3 +52,24 @@ print_list
 # input:
 # steps:
 # output:
+
+# Reflect
+# What did you learn about pseudocode from working on this challenge?
+# - knowing how to pseudocode correctly helps you along the way.
+
+# What are the tradeoffs of using arrays and hashes for this challenge?
+# - working with arrays you have to know each item's position inside the array.
+# - working with hashes you have to deal with keys and values.
+# 
+# What does a method return?
+# - it returns the last expression evaluated.
+
+# What kind of things can you pass into methods as arguments?
+# - strings, hashes, and most commonly variables.
+
+# How can you pass information between methods?
+# - using instance variables(variables with the @ sign).
+
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+# - now I understand how to create methods and what to pass into agrguments. 
+# - I want to get more practice pseudocoding.
