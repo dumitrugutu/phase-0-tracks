@@ -6,3 +6,10 @@
 // Add the letters back together using .join('')
 // Print the result
 // Call the function
+
+function reverseWords(str) {
+	var reversedString = str.split('').reverse().join('')
+	console.log(reversedString);
+}
+
+reverseWords("Hello World!");
