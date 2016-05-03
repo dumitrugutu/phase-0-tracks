@@ -9,7 +9,11 @@
 
 function reverseWords(str) {
 	var reversedString = str.split('').reverse().join('')
-	console.log(reversedString);
+	if (reversedString == reversedString) {
+		console.log(reversedString);
+	} else {
+		console.log("Student is dumb!")
+	}
 }
 
 reverseWords("Hello World!");
