@@ -10,3 +10,16 @@ console.log(colors);
 names.push("Lilly");
 // print the array
 console.log(names);
+
+// create a dictionary
+var horses = {}
+
+// iterate through colors and names variables
+// and assign each name to a color
+for (var i = 0; i < names.length; i++) { 
+  names[i] + " " + colors[i];
+  // add each key-value pair to dictionary
+  horses[names[i]] = colors[i];
+}
+// print the dictionary
+console.log(horses);
