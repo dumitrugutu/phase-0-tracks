@@ -7,7 +7,7 @@
 # Work on some lame grinding noize
 
 
-class CoffeeMachine
+class Drink
     # create the shorthand attributes
 	attr_accessor :sweet, :flavor
 	attr_reader :size
@@ -19,67 +19,36 @@ class CoffeeMachine
 		@flavor = flavor
 		@size = "medium"
 	end
-
-	def iced_coffee
-		puts "How many cubes of sugar?"
-		@sweet = gets.chomp.to_i
-		puts "What flavor?"
-		@flavor = gets.chomp.downcase
-	    puts "Working on a #{size} iced coffee with #{sweet} cubes of sugar and #{flavor} flavor" 
-	end
-
-	def hot_coffee
-		puts "How many cubes of sugar?"
-		@sweet = gets.chomp.to_i
-		puts "What flavor?"
-		@flavor = gets.chomp.downcase
-		puts "Brewing a #{size} size hot coffee with #{sweet} cubes of sugar and #{flavor} flavor"
-	end
-
-	def espresso
-		puts "Your espresso will be ready in 10 seconds"
-		seconds_remaining = 10
-		until seconds_remaining == 0
-		puts "#{seconds_remaining} remaining..." 
-	    seconds_remaining -= 1
-	    end
-	    puts "Your espresso is ready!"
-	end
-
-	def all_orders
-		puts "Your order is a #{size} coffee with #{sweet} cups of sugar and #{flavor} flavor"
-	end
-
 end
 
-orders = []
+# a hash that stores all the orders
+orders = {}
 
+# loop until user types 'done'
 loop do
 	
 	puts "What kind of coffee would you like? Type 'done' to finish your order"
-	type_of_coffee = gets.chomp.downcase
+	type_of_drink = gets.chomp.downcase
 	
-	if type_of_coffee == "done" || type_of_coffee == ""
-        break
+	# exit when user types 'done'
+	break if type_of_drink == "done"
+	
+	if type_of_drink == "espresso"
+		puts "One espresso coming right up!"
+	else
+		puts "How much sugar would you like?"
+		sugar_wanted = gets.chomp
+		puts "What flavor would you like to add?"
+		flavor_wanted = gets.chomp
     end
     
-    cup_of = CoffeeMachine.new("#{@sweet}", "#{@flavor}")
-    orders << cup_of
+    # add all the instances to the hash
+    orders[type_of_drink] = Drink.new("#{sugar_wanted}","#{flavor_wanted}")
 
-    if type_of_coffee == "hot coffee"
-    	cup_of.hot_coffee
-
-    elsif type_of_coffee == "iced coffee"
-    	cup_of.iced_coffee
-
-    elsif type_of_coffee == "espresso"
-    	cup_of.espresso
-    else
-    	puts "Sorry, I didn't get that. We have hot coffee, iced coffee or espresso"
-    end
-        
 end
 
-orders.each do |cup|
-	cup.all_orders
+# iterate through the hash and print all the orders
+orders.each do |drink,order|
+	puts "Your #{drink} with #{order.sweet} of sugar and #{order.flavor} will be ready shortly!"
 end
+
