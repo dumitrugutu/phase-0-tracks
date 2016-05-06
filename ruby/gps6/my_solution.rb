@@ -92,8 +92,13 @@ STATE_DATA.each do |state, population|
 end
 
 
-
-
 #=======================================================================
 # Reflection Section
 
+# Using strings and symbols as hash keys.
+# Require_relative points to a related file in the same folder, as opposed to require
+# which we need to provide a relative path.
+# Using .each and .times methods.
+# The methods didn't require arguments to be passed in, those are available 
+# upon initialization.
+# Improving the DRY thinking, and creating and accessing nested hashes.
