@@ -51,16 +51,11 @@ function generateRandomStrings(stringLength) {
 
 	var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	var resultString = "";
-	var arrayOfStrings = [];
 
-	for ( arrayOfStrings.length = 0; arrayOfStrings.length < stringLength; arrayOfStrings.length++ ) {
-		while ( resultString.length < stringLength ) {
-		    resultString += alphabet[Math.floor(Math.random() * alphabet.length)];
-	    }
-        resultString;
-	}
-	arrayOfStrings.push(resultString);
-	console.log(arrayOfStrings);
+	while ( resultString.length < stringLength ) {
+	    resultString += alphabet[Math.floor(Math.random() * alphabet.length)];
+    }
+	return resultString;
 }
 
 
