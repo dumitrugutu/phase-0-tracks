@@ -58,6 +58,20 @@ function generateRandomStrings(stringLength) {
 	return resultString;
 }
 
+// Create a function that generates a given number of arrays.
+// Create a an empty array to store
+// 
+
+function arrayOfStrings(numberOfStrings) {
+	var resultArray = [];
+
+	while ( resultArray.length < numberOfStrings) {
+		resultArray.push(generateRandomStrings(Math.ceil(Math.random() * 10 )));
+	}
+	console.log(resultArray);
+	return resultArray;
+}
+
 
 // DRIVER CODE
 
