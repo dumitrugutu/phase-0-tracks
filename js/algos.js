@@ -76,3 +76,7 @@ function generateRandomStrings(stringLength) {
 // var firstHash = { name: "Tamir", age: 54 };
 // var secondHash = { name: "Steven", age: 55 };
 // console.log( commonDetails(firstHash, secondHash) );
+
+// testcode for generateRandomStrings
+// generateRandomStrings(3);
+// generateRandomStrings(4);
