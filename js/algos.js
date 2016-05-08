@@ -76,8 +76,8 @@ function arrayOfStrings(numberOfStrings) {
 // DRIVER CODE
 
 // testcode for longestPhrase
-var array = ["long phrase","longest phrase","longer phrase", "this is a longer phrase"];
-//longestPhrase(array);
+// var array = ["long phrase","longest phrase","longer phrase", "this is a longer phrase"];
+// longestPhrase(array);
 
 // testcode for commonDetails
 // var firstHash = { name: "Tamir", age: 55 };
@@ -93,3 +93,12 @@ var array = ["long phrase","longest phrase","longer phrase", "this is a longer p
 // testcode for arrayOfStrings
 // arrayOfStrings(3);
 // arrayOfStrings(4);
+
+// Print 10 times
+var arrayContainer = [];
+
+for ( var i = 0; i < 10; i++ ) {
+	arrayContainer += arrayOfStrings(Math.ceil(Math.random() * 10));
+	console.log(arrayContainer);
+	console.log(longestPhrase(arrayContainer));
+}
