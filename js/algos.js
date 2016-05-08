@@ -89,3 +89,7 @@ function arrayOfStrings(numberOfStrings) {
 // testcode for generateRandomStrings
 // generateRandomStrings(3);
 // generateRandomStrings(4);
+
+// testcode for arrayOfStrings
+// arrayOfStrings(3);
+// arrayOfStrings(4);
