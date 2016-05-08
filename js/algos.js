@@ -9,9 +9,9 @@ function longestPhrase(phrase) {
     var shortest = 0;
     var longest;
     for (var word = 0; word < phrase.length; word++)
-    if (array[word].length > shortest) {
-    	shortest = array[word].length;
-    	longest = array[word];
+    if (phrase[word].length > shortest) {
+    	shortest = phrase[word].length;
+    	longest = phrase[word];
     }
     console.log(longest);    	
 }
@@ -76,8 +76,8 @@ function arrayOfStrings(numberOfStrings) {
 // DRIVER CODE
 
 // testcode for longestPhrase
-// var array = ["long phrase","longest phrase","longer phrase", "this is a longer phrase"];
-// longestPhrase(array);
+var array = ["long phrase","longest phrase","longer phrase", "this is a longer phrase"];
+//longestPhrase(array);
 
 // testcode for commonDetails
 // var firstHash = { name: "Tamir", age: 55 };
