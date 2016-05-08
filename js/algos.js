@@ -39,17 +39,40 @@ function commonDetails(hash1, hash2) {
     return matchingDetail;
 }
 
+// Create a function that takes a number as argument
+// and generates a given number of strings of the same length.
+// Create the alphabet variable.
+// Create a variable container.
+// While the length of the string is less than the given number,
+// run the loop and add each letter to variable container.
+// Create an empty array to store the strings.
+
+function generateRandomStrings(stringLength) {
+
+	var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	var resultString = "";
+	var arrayOfStrings = [];
+
+	for ( arrayOfStrings.length = 0; arrayOfStrings.length < stringLength; arrayOfStrings.length++ ) {
+		while ( resultString.length < stringLength ) {
+		    resultString += alphabet[Math.floor(Math.random() * alphabet.length)];
+	    }
+        resultString;
+	}
+	arrayOfStrings.push(resultString);
+	console.log(arrayOfStrings);
+}
+
 
 // DRIVER CODE
 
 // testcode for longestPhrase
-var array = ["long phrase","longest phrase","longer phrase", "this is a longer phrase"];
-longestPhrase(array);
+// var array = ["long phrase","longest phrase","longer phrase", "this is a longer phrase"];
+// longestPhrase(array);
 
 // testcode for commonDetails
 // var firstHash = { name: "Tamir", age: 55 };
 // var secondHash = { name: "Steven", age: 55 };
-var firstHash = { name: "Tamir", age: 54 };
-var secondHash = { name: "Steven", age: 55 };
-console.log( commonDetails(firstHash, secondHash) );
-
+// var firstHash = { name: "Tamir", age: 54 };
+// var secondHash = { name: "Steven", age: 55 };
+// console.log( commonDetails(firstHash, secondHash) );
