@@ -1,0 +1,105 @@
+1. SELECT * FROM Customers;
+
+CustomerID  CustomerName   Address                         City        PostalCode  Country
+----------  -------------  ------------------------------  ----------  ----------  ----------
+1           Rene Phillips  City Center Plaza 516 Main St.  Elgin       97827       USA
+2           Karl Jablonsk  305 - 14th Ave. S. Suite 3B     Seattle     98128       USA
+3           Howard Snyder  2732 Baker Blvd.                Eugene      97403       USA
+4           Joan Doe       4356 N. Kimball Ave.            Chicago     60625       USA
+5           Paula Wilson   2817 Milton Dr.                 Albuquerqu  87110       USA
+
+2. UPDATE Customers SET CustomerName="Carl Jablonski" WHERE CustomerID=2;
+
+CustomerID  CustomerName   Address                         City        PostalCode  Country
+----------  -------------  ------------------------------  ----------  ----------  ----------
+1           Rene Phillips  City Center Plaza 516 Main St.  Elgin       97827       USA
+2           Carl Jablonsk  305 - 14th Ave. S. Suite 3B     Seattle     98128       USA
+3           Howard Snyder  2732 Baker Blvd.                Eugene      97403       USA
+4           Joan Doe       4356 N. Kimball Ave.            Chicago     60625       USA
+5           Paula Wilson   2817 Milton Dr.                 Albuquerqu  87110       USA
+
+3. SELECT * FROM Customers; SELECT * FROM Orders;
+
+CustomerID  CustomerName   Address                         City        PostalCode  Country
+----------  -------------  ------------------------------  ----------  ----------  ----------
+1           Rene Phillips  City Center Plaza 516 Main St.  Elgin       97827       USA
+2           Carl Jablonsk  305 - 14th Ave. S. Suite 3B     Seattle     98128       USA
+3           Howard Snyder  2732 Baker Blvd.                Eugene      97403       USA
+4           Joan Doe       4356 N. Kimball Ave.            Chicago     60625       USA
+5           Paula Wilson   2817 Milton Dr.                 Albuquerqu  87110       USA
+OrderID     ProductName            OrderDate   ShippingPriority  CustomerOrder
+----------  ---------------------  ----------  ----------------  -------------
+1           To Kill A Mockingbird  1984        true              2
+2           Toilet paper           2012        false             1
+3           Soap                   2014        false             3
+4           Shampoo                2013        true              4
+5           Paper towels           2011        false             5
+
+4. SELECT CustomerID, CustomerName, ProductName, OrderDate FROM Customers INNER JOIN Orders;
+
+1           Rene Phillips  To Kill A Mockingbird  1984
+1           Rene Phillips  Toilet paper           2012
+1           Rene Phillips  Soap                   2014
+1           Rene Phillips  Shampoo                2013
+1           Rene Phillips  Paper towels           2011
+2           Carl Jablonsk  To Kill A Mockingbird  1984
+2           Carl Jablonsk  Toilet paper           2012
+2           Carl Jablonsk  Soap                   2014
+2           Carl Jablonsk  Shampoo                2013
+2           Carl Jablonsk  Paper towels           2011
+3           Howard Snyder  To Kill A Mockingbird  1984
+3           Howard Snyder  Toilet paper           2012
+3           Howard Snyder  Soap                   2014
+3           Howard Snyder  Shampoo                2013
+3           Howard Snyder  Paper towels           2011
+4           Joan Doe       To Kill A Mockingbird  1984
+4           Joan Doe       Toilet paper           2012
+4           Joan Doe       Soap                   2014
+4           Joan Doe       Shampoo                2013
+4           Joan Doe       Paper towels           2011
+5           Paula Wilson   To Kill A Mockingbird  1984
+5           Paula Wilson   Toilet paper           2012
+5           Paula Wilson   Soap                   2014
+5           Paula Wilson   Shampoo                2013
+5           Paula Wilson   Paper towels           2011
+
+5. DELETE FROM Customers WHERE CustomerID=4;
+
+CustomerID  CustomerName   Address                         City        PostalCode  Country
+----------  -------------  ------------------------------  ----------  ----------  ----------
+1           Rene Phillips  City Center Plaza 516 Main St.  Elgin       97827       USA
+2           Carl Jablonsk  305 - 14th Ave. S. Suite 3B     Seattle     98128       USA
+3           Howard Snyder  2732 Baker Blvd.                Eugene      97403       USA
+5           Paula Wilson   2817 Milton Dr.                 Albuquerqu  87110       USA
+
+Release 3
+
+2. SELECT * FROM Customers LEFT OUTER JOIN Orders USING (CustomerID, CustomerName, ProductName);
+
+Error: cannot join using column CustomerID - column not present in both tables
+
+
+SELECT CustomerID, CustomerName, ProductName FROM Customers CROSS JOIN Orders;
+
+CustomerID  CustomerName   ProductName
+----------  -------------  ---------------------
+1           Rene Phillips  To Kill A Mockingbird
+1           Rene Phillips  Toilet paper
+1           Rene Phillips  Soap
+1           Rene Phillips  Shampoo
+1           Rene Phillips  Paper towels
+2           Carl Jablonsk  To Kill A Mockingbird
+2           Carl Jablonsk  Toilet paper
+2           Carl Jablonsk  Soap
+2           Carl Jablonsk  Shampoo
+2           Carl Jablonsk  Paper towels
+3           Howard Snyder  To Kill A Mockingbird
+3           Howard Snyder  Toilet paper
+3           Howard Snyder  Soap
+3           Howard Snyder  Shampoo
+3           Howard Snyder  Paper towels
+5           Paula Wilson   To Kill A Mockingbird
+5           Paula Wilson   Toilet paper
+5           Paula Wilson   Soap
+5           Paula Wilson   Shampoo
+5           Paula Wilson   Paper towels
