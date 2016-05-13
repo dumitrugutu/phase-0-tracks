@@ -57,6 +57,14 @@ store_database.results_as_hash = true
 # end
 
 # create method that adds customers to database
+# def create_customers(store_database, name, card_number, amount)
+#   store_database.execute("INSERT INTO customers (name, card_number, amount) 
+#     VALUES (?, ?, ?)", [name, card_number, amount])
+# end
+
+# 1000.times do
+#   create_customers(store_database, Faker::Name.name, Faker::Business.credit_card_number, Faker::Number.between(1, 9172))
+# end
 
 # create method that authorizes managers to modify data in the customers table
 
