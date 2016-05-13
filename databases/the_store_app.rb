@@ -81,3 +81,6 @@ def manager_identification(store_database, manager_idn)
 end
 
 # add user interface
+puts "Enter your identification number(idn):"
+manager_idn = gets.chomp.to_i
+manager_identification(store_database, manager_idn)
