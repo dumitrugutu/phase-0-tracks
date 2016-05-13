@@ -35,6 +35,10 @@ create_table_managers = <<-SQL
 SQL
 
 # create customers and managers tables
+store_database.execute(create_table_customers)
+store_database.execute(create_table_items)
+store_database.execute(create_table_managers)
+store_database.results_as_hash = true
 
 # add testcode
 
