@@ -41,6 +41,14 @@ store_database.execute(create_table_managers)
 store_database.results_as_hash = true
 
 # add testcode
+# store_database.execute("INSERT INTO customers (name, card_number, amount) 
+#   VALUES ('Peter Gross', 1234567890987654, 500)")
+
+# store_database.execute("INSERT INTO items (item_name, quantity, price)
+#   VALUES('Toilet paper', 34, 11)")
+
+# store_database.execute("INSERT INTO managers (name, idn)
+#   VALUES ('Craig McFarlane', 76890)")
 
 # use ORM to retrieve data 
 
