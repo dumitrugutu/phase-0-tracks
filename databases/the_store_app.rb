@@ -51,6 +51,10 @@ store_database.results_as_hash = true
 #   VALUES ('Craig McFarlane', 76890)")
 
 # use ORM to retrieve data 
+# customers = store_database.execute("SELECT * FROM customers")
+# customers.each do |customer|
+#   puts "#{customer['name']} has #{customer['amount']} dollars available on his card"
+# end
 
 # create method that adds customers to database
 
