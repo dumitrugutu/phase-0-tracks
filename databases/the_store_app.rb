@@ -67,5 +67,17 @@ store_database.results_as_hash = true
 # end
 
 # create method that authorizes managers to modify data in the customers table
+def manager_identification(store_database, manager_idn)
+  managers = store_database.execute("SELECT idn FROM managers")
+  managers.each do |manager|
+    if manager['idn'] == manager_idn
+      puts "You have successfully logged in!"
+      true
+    else
+      puts "Please try again"
+      false
+    end
+  end
+end
 
 # add user interface
