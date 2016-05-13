@@ -1,8 +1,11 @@
 # Create a store app
 
 # require gems
+require 'sqlite3'
+require 'faker'
 
 # Create SQLite3 database
+store_database = SQLite3::Database.new("store.db")
 
 # use string delimiters to create tables
 
