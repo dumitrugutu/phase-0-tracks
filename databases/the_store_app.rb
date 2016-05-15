@@ -167,6 +167,7 @@ end
 
 # USER INTERFACE
 
+# manager identification number: 76890
 loop do 
   puts "-----------"
   puts "Enter your identification number(idn):"
