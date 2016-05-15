@@ -80,7 +80,7 @@ def manager_identification(store_database, manager_idn)
 end
 
 # add managers to the table managers
-def add_managers(store_database, name, idn)
+def add_manager(store_database, name, idn)
   store_database.execute("INSERT INTO managers (name, idn) 
     VALUES (?, ?)", [name, idn])
 end
