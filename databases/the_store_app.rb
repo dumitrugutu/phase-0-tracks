@@ -71,10 +71,10 @@ def manager_identification(store_database, manager_idn)
   managers.each do |manager|
     if manager['idn'] == manager_idn
       puts "You have successfully logged in!"
-      true
+      return true
     else
       puts "Please try again"
-      false
+      return false
     end
   end
 end
