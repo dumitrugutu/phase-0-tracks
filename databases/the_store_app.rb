@@ -79,6 +79,17 @@ def manager_identification(store_database, manager_idn)
   end
 end
 
+# add managers to the table managers
+def add_managers(store_database, name, idn)
+  store_database.execute("INSERT INTO managers (name, idn) 
+    VALUES (?, ?)", [name, idn])
+end
+
+# delete managers from table managers
+def delete_manager(store_database, name)
+  store_database.execute("DELETE FROM managers WHERE name = ?", [name])
+end
+
 # add user interface
 puts "Enter your identification number(idn):"
 manager_idn = gets.chomp.to_i
