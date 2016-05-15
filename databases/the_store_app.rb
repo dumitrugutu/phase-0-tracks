@@ -111,6 +111,41 @@ def delete_customer(store_database, customer_name)
 end
 
 # add user interface
-puts "Enter your identification number(idn):"
-manager_idn = gets.chomp.to_i
-manager_identification(store_database, manager_idn)
+# puts "Enter your identification number(idn):"
+# manager_idn = gets.chomp.to_i
+# manager_identification(store_database, manager_idn)
+
+# puts "Enter the item name you want to add: "
+# item_to_add = gets.chomp
+# puts "Enter the quantity: "
+# item_quantity = gets.chomp.to_i
+# puts "Enter the price: "
+# item_price = gets.chomp.to_i
+# add_item(store_database, item_to_add, item_quantity, item_price)
+
+# puts "Enter the name of the item to delete: "
+# item_to_delete = gets.chomp
+# delete_item(store_database, item_to_delete)
+
+# puts "What's the manager's name?"
+# manager_name = gets.chomp
+# puts "What is the manager's idn?"
+# manager_number = gets.chomp.to_i
+# add_manager(store_database, manager_name, manager_number)
+
+# puts "Enter name of manager to delete: "
+# manager_to_delete = gets.chomp
+# delete_manager(store_database, manager_to_delete)
+
+# puts "Enter customer's name: "
+# customer_to_add = gets.chomp
+# puts "Enter customer's card number: "
+# customer_card_number = gets.chomp.to_i
+# add_customer(store_database, customer_to_add, customer_card_number)
+
+# puts "Enter the name of the customer to delete: "
+# customer_to_delete = gets.chomp
+# delete_customer(store_database, customer_to_delete)
+
+
+
