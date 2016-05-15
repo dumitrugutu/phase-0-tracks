@@ -12,8 +12,7 @@ create_table_customers = <<-SQL
   CREATE TABLE IF NOT EXISTS customers(
     id INTEGER PRIMARY KEY,
     name VARCHAR(255),
-    card_number INTEGER,
-    amount INTEGER
+    card_number INTEGER
   )
 SQL
 
@@ -41,8 +40,8 @@ store_database.execute(create_table_managers)
 store_database.results_as_hash = true
 
 # add testcode
-# store_database.execute("INSERT INTO customers (name, card_number, amount) 
-#   VALUES ('Peter Gross', 1234567890987654, 500)")
+# store_database.execute("INSERT INTO customers (name, card_number) 
+#   VALUES ('Peter Gross', 1234567890987654)")
 
 # store_database.execute("INSERT INTO items (item_name, quantity, price)
 #   VALUES('Toilet paper', 34, 11)")
@@ -53,17 +52,17 @@ store_database.results_as_hash = true
 # use ORM to retrieve data 
 # customers = store_database.execute("SELECT * FROM customers")
 # customers.each do |customer|
-#   puts "#{customer['name']} has #{customer['amount']} dollars available on his card"
+#   puts "#{customer['name']} has this card number #{customer['card_number']}"
 # end
 
 # create method that adds customers to database
-# def create_customers(store_database, name, card_number, amount)
-#   store_database.execute("INSERT INTO customers (name, card_number, amount) 
-#     VALUES (?, ?, ?)", [name, card_number, amount])
+# def create_customers(store_database, name, card_number)
+#   store_database.execute("INSERT INTO customers (name, card_number) 
+#     VALUES (?, ?)", [name, card_number])
 # end
 
 # 1000.times do
-#   create_customers(store_database, Faker::Name.name, Faker::Business.credit_card_number, Faker::Number.between(1, 9172))
+#   create_customers(store_database, Faker::Name.name, Faker::Business.credit_card_number
 # end
 
 # create method that authorizes managers to modify data in the customers table
