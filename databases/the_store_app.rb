@@ -164,9 +164,22 @@ def user_interface(store_database)
   end
 end
 
-# puts "Enter the name of the customer to delete: "
-# customer_to_delete = gets.chomp
-# delete_customer(store_database, customer_to_delete)
 
+# USER INTERFACE
+
+loop do 
+  puts "-----------"
+  puts "Enter your identification number(idn):"
+  manager_idn = gets.chomp.to_i
+  manager_identification(store_database, manager_idn)
+
+  if manager_identification(store_database, manager_idn) == true
+    user_interface(store_database)
+    break
+  else
+    puts "You are not authorized to access the database"
+  end
+
+end
 
 
