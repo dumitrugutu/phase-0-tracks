@@ -11,7 +11,7 @@ store_database = SQLite3::Database.new("store.db")
 create_table_customers = <<-SQL
   CREATE TABLE IF NOT EXISTS customers(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255),
+    customer_name VARCHAR(255),
     card_number INTEGER
   )
 SQL
