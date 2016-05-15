@@ -91,7 +91,7 @@ def delete_manager(store_database, name)
 end
 
 # add items to the table items
-def add_items(store_database, item_name, quantity, price)
+def add_item(store_database, item_name, quantity, price)
   store_database.execute("INSERT INTO items (item_name, quantity, price) 
     VALUES (?, ?, ?)", [item_name, quantity, price])
 end
