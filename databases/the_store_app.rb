@@ -90,6 +90,17 @@ def delete_manager(store_database, name)
   store_database.execute("DELETE FROM managers WHERE name = ?", [name])
 end
 
+# add items to the table items
+def add_items(store_database, item_name, quantity, price)
+  store_database.execute("INSERT INTO items (item_name, quantity, price) 
+    VALUES (?, ?, ?)", [item_name, quantity, price])
+end
+
+# delete item by name
+def delete_item(store_database, item_name)
+  store_database.execute("DELETE FROM items WHERE item_name = ?", [item_name])
+end
+
 # add user interface
 puts "Enter your identification number(idn):"
 manager_idn = gets.chomp.to_i
