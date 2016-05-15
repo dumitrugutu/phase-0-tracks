@@ -101,11 +101,13 @@ def delete_item(store_database, item_name)
   store_database.execute("DELETE FROM items WHERE item_name = ?", [item_name])
 end
 
+# add customer to the table customers
 def add_customer(store_database, customer_name, card_number)
   store_database.execute("INSERT INTO customers (customer_name, card_number) 
     VALUES (?, ?)", [customer_name, card_number])
 end
 
+# delete customer from the table customers
 def delete_customer(store_database, customer_name)
   store_database.execute("DELETE FROM customers WHERE customer_name = ?", [customer_name])
 end
