@@ -56,14 +56,14 @@ store_database.execute("INSERT INTO managers (name, idn)
 # end
 
 # create method that adds customers to database
-def create_customers(store_database, customer_name, card_number)
-  store_database.execute("INSERT INTO customers (customer_name, card_number) 
-    VALUES (?, ?)", [customer_name, card_number])
-end
+# def create_customers(store_database, customer_name, card_number)
+#   store_database.execute("INSERT INTO customers (customer_name, card_number) 
+#     VALUES (?, ?)", [customer_name, card_number])
+# end
 
-100.times do
-  create_customers(store_database, Faker::Name.name, Faker::Business.credit_card_number)
-end
+# 100.times do
+#   create_customers(store_database, Faker::Name.name, Faker::Business.credit_card_number)
+# end
 
 # create method that authorizes managers to modify data in the customers table
 def manager_identification(store_database, manager_idn)
