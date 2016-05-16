@@ -167,14 +167,17 @@ end
 
 # manager identification number: 76890
 loop do 
+
   puts "-----------"
   puts "Enter your 5-digit identification number(idn), or type '0' to exit:"
   manager_idn = gets.chomp.to_i
+  # verify if the number matches the database
   manager_identification(store_database, manager_idn)
-
+  # break out of the loop
   break if manager_idn == 0
 
   if manager_identification(store_database, manager_idn) == true
+    # call the method
     user_interface(store_database)
     break
   else
