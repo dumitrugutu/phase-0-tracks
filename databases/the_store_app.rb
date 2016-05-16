@@ -70,10 +70,8 @@ def manager_identification(store_database, manager_idn)
   managers = store_database.execute("SELECT idn FROM managers")
   managers.each do |manager|
     if manager['idn'] == manager_idn
-      puts "You have successfully logged in!"
       return true
     else
-      puts "Please try again"
       return false
     end
   end
@@ -167,11 +165,14 @@ end
 
 # USER INTERFACE
 
+# manager identification number: 76890
 loop do 
   puts "-----------"
-  puts "Enter your identification number(idn):"
+  puts "Enter your 5-digit identification number(idn), or type '0' to exit:"
   manager_idn = gets.chomp.to_i
   manager_identification(store_database, manager_idn)
+
+  break if manager_idn == 0
 
   if manager_identification(store_database, manager_idn) == true
     user_interface(store_database)
