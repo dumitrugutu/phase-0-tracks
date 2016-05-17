@@ -18,3 +18,13 @@ function hidePicture(event) {
 
 var clickButton = document.getElementById("button");
 clickButton.addEventListener("click", hidePicture);
+
+//click on the button to show the picture
+function showPicture(event) {
+	document.getElementById("summer").hidden = false;
+}
+
+var clickButton = document.getElementById("show-button");
+clickButton.addEventListener("click", showPicture);
+
+
