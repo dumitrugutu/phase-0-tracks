@@ -10,3 +10,11 @@ function addHeading(event) {
 }
 
 addHeading();
+
+//click on the button to hide the picture
+function hidePicture(event) {
+	document.getElementById("summer").hidden = true;
+}
+
+var clickButton = document.getElementById("button");
+clickButton.addEventListener("click", hidePicture);
