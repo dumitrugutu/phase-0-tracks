@@ -1,6 +1,6 @@
 ### Learning jquery
 
-#### It only get's better!
+#### It only gets better!
 
 1. Find good jquery recources. Bookmark the best ones.
 ..* https://learn.jquery.com/
