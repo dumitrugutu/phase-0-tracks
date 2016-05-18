@@ -16,3 +16,5 @@
 ..* you're about to learn something new.
 
 5. Repeat.
+
+### Confirmed once again. Practicing is the best form of learning.
