@@ -9,3 +9,13 @@ $(document).ready(function() {
 		$("p").show("slow");
 	});
 });
+
+//change the color of the h1 when hovering
+$(document).ready(function() {
+	$("h1").hover(function() {
+		$(this).css("color", "green");
+	});
+	$("h1").mouseleave(function() {
+		$(this).css("color", "black");
+	});
+});
