@@ -19,3 +19,10 @@ $(document).ready(function() {
 		$(this).css("color", "black");
 	});
 });
+
+//add a different text to the h2
+$(document).ready(function() {
+	$("h2").click(function() {
+		$(this).html("This is a different text");
+	});
+});
