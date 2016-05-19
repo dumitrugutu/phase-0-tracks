@@ -32,5 +32,6 @@ $(document).ready(function() {
 	$("div:last").click(function() {
 		$(this).animate({left: "200px"}, "slow");
 		$(this).animate({fontSize: "4em"}, "slow");
+		$(this).css("color", "white");
 	});
 });
