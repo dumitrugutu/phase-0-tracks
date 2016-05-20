@@ -47,5 +47,5 @@ end
 
 # write a get route that displays an address
 get '/contact' do
-  contact = "2641 W. Estes Ave. Chicago, IL"
+  "2641 W. Estes Ave. Chicago, IL"
 end
