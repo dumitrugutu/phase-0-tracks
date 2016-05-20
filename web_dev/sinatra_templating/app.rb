@@ -23,6 +23,10 @@ get '/campus' do
 	erb :campus
 end
 
+get '/search_students' do
+	erb :search_students
+end
+
 # create new students via
 # a form
 post '/students' do
