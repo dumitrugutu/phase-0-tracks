@@ -60,3 +60,10 @@ get '/good_job/' do
     "Good job!"
   end
 end
+
+# a route that takes two numbers and responds with the result
+get '/:first_num/plus/:second_num' do
+  "= " " #{params[:first_num].to_i + params[:second_num].to_i}"
+end
+
+
