@@ -66,4 +66,16 @@ get '/:first_num/plus/:second_num' do
   "= " " #{params[:first_num].to_i + params[:second_num].to_i}"
 end
 
+# write a get route that takes a name and searches the database 
+# and displays the age and campus
+get '/:name' do
+  students = db.execute("SELECT * FROM students WHERE name=?", [params[:name]])
+  response = ""
+  students.each do |student|
+    response << "Age: #{student['age']}<br>"
+    response << "Campus: #{student['campus']}<br><br>"
+  end
+  response
+end
+
 
